@@ -5,7 +5,7 @@
 ** Login   <pessy_f@epitech.net>
 **
 ** Started on  Thu Jul 10 20:17:04 2014 Pessy Florian
-** Last update Sat Jul 12 11:47:11 2014 Pessy Florian
+** Last update Sun Jul 13 19:48:42 2014 Pessy Florian
 */
 
 #include <stdio.h>
@@ -23,7 +23,7 @@ char    **str_to_wordtab(char *str)
   counts = count(str);
   i = 0;
   a = 0;
-  if ((tab = malloc(sizeof(char *) * (counts + 2))) == NULL)
+  if ((tab = malloc(sizeof(char*) * (counts + 2))) == NULL)
     return (NULL);
   while (str[i] != '\0')
     {

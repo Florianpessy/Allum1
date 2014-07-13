@@ -5,7 +5,7 @@
 ** Login   <pessy_f@epitech.net>
 **
 ** Started on  Thu Jul 10 20:12:40 2014 Pessy Florian
-** Last update Sat Jul 12 11:35:40 2014 Pessy Florian
+** Last update Sun Jul 13 19:47:13 2014 Pessy Florian
 */
 
 #include <stdio.h>
@@ -20,7 +20,6 @@ char	**ia(char **tab, int size)
 
   aff_tab(tab);
   my_putstr("\nThe ia is thinking...\n");
-  srandom(time(0) * getpid());
   line = random() % (size + 1);
   allum = random() % 50;
   while (line == 0 || allum > count_allum(line, tab) || allum == 0)

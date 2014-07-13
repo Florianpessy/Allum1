@@ -5,7 +5,7 @@
 ** Login   <pessy_f@epitech.net>
 **
 ** Started on  Thu Jul 10 20:09:45 2014 Pessy Florian
-** Last update Sat Jul 12 11:44:37 2014 Pessy Florian
+** Last update Sun Jul 13 19:56:45 2014 Pessy Florian
 */
 
 #include <stdio.h>
@@ -51,7 +51,7 @@ char	*creat_allum(int size, int i, char *str)
   y = 0;
   i = 0;
   a = 1;
-  if ((str = malloc(size * size * 2)) == NULL)
+  if ((str = malloc(sizeof(char*) * size * size * 2)) == NULL)
     return (0);
   while (x != size)
     {
@@ -95,12 +95,6 @@ void	*game(char **tab, int size, int players)
     }
 }
 
-void	my_read(char buffer[4096])
-{
-  if (read(0, buffer, 4096) <= 0)
-    exit(1);
-}
-
 int	main(int ac, char **av)
 {
   char	**tab;
@@ -114,16 +108,14 @@ int	main(int ac, char **av)
   my_read(buffer);
   new_buffer(buffer);
   i = check_buffer(buffer);
-  while (i != 0 || *buffer == '\0'
-	 || my_getnbr(buffer) <= 0 || my_getnbr(buffer) > 2)
+  while (i != 0 || *buffer == '\0' || my_getnbr(buffer) <= 0)
     i = re_players(buffer);
   players = my_getnbr(buffer);
   my_putstr("\nNumber of floor(s) ?: ");
   my_read(buffer);
   new_buffer(buffer);
   i = check_buffer(buffer);
-  while (i != 0 || *buffer == '\0'
-	 || my_getnbr(buffer) <= 0 || my_getnbr(buffer) > 25)
+  while (i != 0 || *buffer == '\0' || my_getnbr(buffer) <= 0)
     i = re_etages(buffer);
   size = my_getnbr(buffer);
   str = creat_allum(my_getnbr(buffer), i, str);

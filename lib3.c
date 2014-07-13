@@ -5,7 +5,7 @@
 ** Login   <pessy_f@epitech.net>
 **
 ** Started on  Thu Jul 10 20:15:01 2014 Pessy Florian
-** Last update Sat Jul 12 11:46:11 2014 Pessy Florian
+** Last update Sun Jul 13 19:45:06 2014 Pessy Florian
 */
 
 #include <stdio.h>
@@ -82,7 +82,7 @@ int     re_players(char *buffer)
 
   my_putstr(buffer);
   my_putstr(" is not a good number.\n");
-  my_putstr("Nombre de joueur(s) ?:");
+  my_putstr("Number of player(s) ?:");
   if (read(0, buffer, 4096) <= 0)
     exit(1);
   new_buffer(buffer);

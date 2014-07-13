@@ -5,7 +5,7 @@
 ** Login   <pessy_f@epitech.net>
 **
 ** Started on  Thu Jul 10 20:12:26 2014 Pessy Florian
-** Last update Sat Jul 12 11:32:51 2014 Pessy Florian
+** Last update Sun Jul 13 19:46:27 2014 Pessy Florian
 */
 
 #ifndef HEADER_H_
@@ -25,7 +25,6 @@ int	choose_line(int size, char **tab);
 ** my_getnbr
 */
 
-int	my_power_rec(int nb, int power);
 int	my_getnbr(char *str);
 
 /*
@@ -39,7 +38,6 @@ char	**str_to_wordtab(char *str);
 */
 
 char	**ia(char **tab, int size);
-int	fine_line(char **tab);
 int	count_line(char **tab);
 
 /*
@@ -78,5 +76,6 @@ int	re_player(char *buffer);
 
 int	choose_matche(int count, char **tab);
 int	end_game(char **tab);
+void	my_read(char buffer[4096]);
 
 #endif	/* !HEADER_H_ */
