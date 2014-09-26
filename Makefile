@@ -5,7 +5,7 @@
 ## Login   <pessy_f@epitech.net>
 ##
 ## Started on  Thu Jul 10 20:11:33 2014 Pessy Florian
-## Last update Sun Jul 13 19:57:40 2014 Pessy Florian
+## Last update Mon Sep 15 13:33:33 2014 Pessy Florian
 ##
 
 CC	= gcc
@@ -21,7 +21,7 @@ SRC	= allum1.c \
 	  lib4.c \
 	  wordtab.c \
 	  ia.c \
-	  my_getnbr.c \
+	  my_getnbr.c
 
 OBJ	= $(SRC:.c=.o)
 
